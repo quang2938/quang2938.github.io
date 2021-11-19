@@ -1,0 +1,47 @@
+h2{
+    color:blue;
+    text-align: center;
+}
+th,
+td{
+    text-align: left;
+    padding: 5px
+}
+th{
+    color: springgreen;
+    width:150px;
+}
+.td{
+    color: yellow
+}
+.input{
+    width: 350px;
+}
+.tdx{
+    color: black;
+}
+main button{
+    background-color: lawngreen;
+    color:rebeccapurple;
+    font-weight: bold;
+}
+main button:hover{
+    background-color: springgreen;
+}
+.disable{
+    display: none;
+}
+#canhbao,
+#canhbao1,
+#canhbao3,
+#canhbao4,
+#canhbao5,
+#canhbao6,
+#canhbao7,
+#canhbaoten,
+#canhbaoten1,
+#canhbaoso1,
+#canhbaoso{
+    font-weight: bold;
+    color: red;
+}

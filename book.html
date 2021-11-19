@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.google.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/form.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+    <link rel="stylesheet" href="./bootstrap-3.3.6-dist/css/bootstrap.css">
+    <script src="http://minime.stephan-brumme.com/files/jquery/jquery-1.12.0.min.js"></script>
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <title>Đặt sân</title>
+</head>
+<body> 
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar textimg1">
+                <h1>SÂN CỦA TÔI</h1>
+                <h2>NƠI ĐAM MÊ CHÁY BỎNG</h2>
+                <h4>THỜI GIAN LÀM VIỆC TỪ 6:00-22:00</h4>
+                <div>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav">
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="details-1.html">Tìm sân</a></li>
+                            <li><a href="details-2.html">Liên hệ</a></li>
+                        </ul>
+                </div>
+            </nav>
+        </div>         
+    </header>
+    <main>
+        <form name="datsan" action="book.html" onsubmit="return haydienvaoform(event)" method="POST">
+            <h2>Đặt sân</h2>
+            <table class="table-condensed">
+                <tr>
+                    <th>Tên sân</th>
+                    <td class="td">Sân bóng Hương Tiến</td>
+                </tr>
+                <tr>
+                    <th>Địa chỉ</th>
+                    <td class="td">Sô 89 đường Hoàng Hoa Thám, Tiểu khu 4, Thị trấn Neo, Huyện Yên Dũng, Tỉnh Bắc Giang</td>
+                </tr>
+                <tr>
+                    <th>Liên hệ</th>
+                    <td class="td">0204 3870 230-Anh Linh</td>
+                </tr>
+                <tr>
+                    <th>Tên người đặt</th>
+                    <td>
+                        <input class="input" id="tenkhach" type="text" onsubmit="return tenkhach()">
+                        <span id="canhbao" class="disable">Hãy điền tên của bạn!</span>
+                        <span id="canhbaoten" class="disable">Tên không dài quá 50 kí tự</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số điện thoại</th>
+                    <td>
+                        <input class="input" id="sdt" type="text" onsubmit="return phone()">
+                        <span id="canhbao1" class="disable">Hãy điền số điện thoại của bạn!</span>
+                        <span id="canhbaoten1" class="disable">Không dài quá 50 kí tự</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Đặt khung giờ</th>
+                    <td>
+                        <select id="khunggio" class="lala" onsubmit="return khunggiodat()">
+                            <option value="" selected disabled hidden>---Chọn khung giờ---</option>
+                            <option value="300000">06:00 - 16:00: 300k/h</option>
+                            <option value="600000">16:00 - 17:30: 600k/h</option>
+                            <option value="800000">17:30 - 20:30: 800k/h</option>
+                            <option value="400000">20:30 - 22:00: 400k/h</option>
+                        </select>
+                    <span id="canhbao3" class="disable">Hãy chọn khung giờ</span>
+                </td>
+                </tr>
+                <tr>
+                    <th>Số giờ</th>
+                    <td onsubmit="return sogiochoi()">
+                        <input id="sogio" type="number" step="0.5">
+                        <span id="canhbao4" class="disable">Hãy nhập số giờ muốn đặt sân!</span>
+                        <span id="canhbaoso" class="disable">Chỉ được phép nhập số dương!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số người chơi</th>
+                    <td onsubmit="return songuoichoi()">
+                        <input id="nguoichoi" type="number"  min="1">
+                        <span id="canhbao5" class="disable">Hãy nhập số người chơi!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Số đội chơi</th>
+                    <td>
+                        <input id="doichoi" type="number" value="2" onsubmit="return sodoichoi()" >
+                        <span id="canhbao6" class="disable">Hãy nhập số đội chơi!</span>
+                        <span id="canhbaoso1" class="disable">Chỉ được phép nhập số dương!</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Đặt định kỳ</th>
+                    <td class="td">
+                        <input name="dinhky" type="radio">Không <br>
+                        <input name="dinhky" type="radio" checked>Hàng tuần <br>
+                        <input name="dinhky" type="radio">Hàng tháng
+                    </td>
+                </tr>
+                <tr>
+                    <th>Dịch vụ thêm</th>
+                    <td class="td">
+                        <input type="checkbox">Nước uống miễn phí<br>
+                        <input id="dvt2CheckBox" type="checkbox" value="300000">Đồng phục thi đấu (300k/đội)<br>
+                        <input id="dvt3CheckBox" type="checkbox" value="200000">Thuê trọng tài (200k/h)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Tổng tiền</th>
+                    <td>
+                        <span id="tonggia" onchange="tongtien()" onsubmit="return canhbaoA()"></span>
+                        <span  id="canhbao7" class="disable">Hãy lựa chọn thông tin đặt sân</span>
+                    </td>
+                </tr>
+            </table>
+            <button type="button" onclick="datsanbtt()">Đặt sân</button>
+        </form>
+    </main>
+    <footer class="textimg1">
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="details-1.html">Tìm sân</a></li>
+            <li><a href="details-2.html">Liên hệ</a></li>
+        </ul> 
+        <p class="lala">© 2018 Công ty TNHH Xây dựng Hương Tiến<br>
+                Địa chỉ: Tiểu khu 4, Thị trấn Neo, Huyện Yên Dũng, Tỉnh Bắc Giang, Việt Nam<br>
+                ĐT/Fax: 0204 3870 230 Email: info@htcc.com.vn Website: www.htcc.com.vn<br>
+                Kết nối với chúng tôi qua: FaceBookMessenger hay FacebookFanPage
+        </p>
+    </footer>
+    <script src="./jss/book.js"></script>
+</body>

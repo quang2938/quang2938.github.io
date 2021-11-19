@@ -1,0 +1,111 @@
+body{
+    background-image: url("../images/8k.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    overflow-x: hidden;
+    padding: 0px 10px;
+}
+header,
+footer{
+    background-image: url(./../images/banner.jpg);
+    margin: 15px;
+    background-size: cover;
+}
+header ul,
+header li, 
+footer ul, 
+footer li{
+    list-style-type: none;
+    display:inline-flex;
+    margin: 0%;
+    padding: 0%;
+}
+main>h3,
+main>h4{
+    padding-left: 20px;
+}
+ul a:hover, 
+a:hover{
+    background-color: cyan;
+    text-decoration: none;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    padding:5px;
+    border: none;
+    outline: none;
+}
+h2,
+h3,
+h4{
+    padding-left: 20px;
+}
+main h1, 
+main h2, 
+main h3,
+main h4, 
+ul a,
+a{
+    color:blue;
+}
+h1, 
+main h2, 
+.textimg1, 
+.text2{
+    text-align:center;
+}
+.text1{
+    color:white;
+}
+img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.text1{
+    text-align: justify;
+    padding:0px 20px;
+}
+.textimg1{
+    color:orangered;
+    padding:10px 0px; 
+    clear:both;
+}
+.text1{
+    margin-left:30px;
+}
+.text2{
+    font-style: italic;
+    color:rgb(255, 0, 221);
+}
+.lala{
+    color:black;
+}
+.navbar a:hover{
+    background-color: red;
+}
+.row::after{
+    clear: both;
+    display: table;
+}
+.menu ul{
+    list-style-type: none;
+    margin: 0%;
+    padding:0%;
+}
+.menu li{
+    background-color:darkcyan;
+    color:darkkhaki;
+    padding:10px 20px;
+    margin:5px;
+}
+.menu li:hover{
+    background-color: darkturquoise;
+}
+.cotphai{
+    background-color: darkcyan;
+    color: darkkhaki;
+    text-align: center;
+    padding:0px 30px 0px 0px;
+}
